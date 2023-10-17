@@ -1,0 +1,23 @@
+#include "shell.h"
+
+/**
+ * char *: indicating that it returns a pointer to a character (string)
+ */
+char *rdl_x(void)
+{
+	char *line = NULL;
+	size_t len = 0;
+	ssize_t n;
+
+	if (isatty(STDIN_FILENO))
+		write(STDOUT_FILENO, "$ ", 2);
+
+	n = getline(&line, &len, stdin);
+	if (n == -1)
+	{
+		free(line);
+		return (NULL);
+	}
+
+	return (line);
+}
