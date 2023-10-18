@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * free_array_2
+ * free_array_2 - functin that free arr,
  * @arr: ptr to array
  */
 void free_array_2(char **arr)
@@ -17,9 +17,10 @@ void free_array_2(char **arr)
 	free(arr), arr = NULL;
 }
 /**
- * char *nm: appears to be a string (char pointer)
- * char *xcmd: another string (char pointer)
- * int ndx: an integer
+ * pr_xerr - funciton that print err
+ * @nm: appears to be a string (char pointer)
+ * @xcmd: string (char pointer)
+ * @ndx: an integer,
  */
 void pr_xerr(char *nm, char *xcmd, int ndx)
 {
@@ -27,7 +28,7 @@ void pr_xerr(char *nm, char *xcmd, int ndx)
 
 	dinx = int_asc(ndx);
 
-	write(STDERR_FILENO, nm, _STRLEN(nm));
+	write(STDERR_FILENO, nm, _strlen(nm));
 	write(STDERR_FILENO, ": ", 2);
 	write(STDERR_FILENO, dinx, _strlen(dinx));
 	write(STDERR_FILENO, ": ", 2);
@@ -35,4 +36,3 @@ void pr_xerr(char *nm, char *xcmd, int ndx)
 	write(STDERR_FILENO, msl, _strlen(msl));
 	free(dinx);
 }
-

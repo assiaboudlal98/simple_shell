@@ -1,11 +1,8 @@
 #include "shell.h"
-
 /**
- * int u: This parameter is an integer, and it's used as input to the function
- *
- * char *: indicates that it returns a pointer to a character (string)
- *
- * return: always same
+ * int_asc - function that prints int to ascii,
+ * @u: This parameter is an integer, and it's used as input to the funct,
+ * Return: always same
  */
 char *int_asc(int u)
 {
@@ -28,12 +25,9 @@ char *int_asc(int u)
 	return (_strdup(bf));
 }
 /**
- * void: The return type of the function indicates that it doesn't return any value
- * rvrs: This is the name of the function
- * char *xst: is a pointer to a character array (string) named xst
- * int lnght: is an integer representing the length of the string
- *
- * return: same
+ * rvrs - funciton revers,
+ * @xst: is a pointer to a character array (string) named xst,
+ * @lnght: is an integer representing the length of the string,
  */
 void rvrs(char *xst, int lnght)
 {
