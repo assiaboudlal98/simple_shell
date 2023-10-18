@@ -37,7 +37,7 @@ char **tkn_x(char *line)
 	{
 		command[q] = _strdup(token);
 		token = strtok(NULL, DELIM);
-		i++;
+		q++;
 	}
 	free(line), line = NULL;
 	command[q] = NULL;

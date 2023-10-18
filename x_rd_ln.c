@@ -1,7 +1,8 @@
 #include "shell.h"
 
 /**
- * char *: indicating that it returns a pointer to a character (string)
+ * rdl_x - function readline,
+ * Return: returns a pointer to a cha str,
  */
 char *rdl_x(void)
 {

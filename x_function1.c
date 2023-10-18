@@ -15,7 +15,7 @@ char *_strdup(const char *str)
 	if (dupl == NULL)
 		return (NULL);
 	for (i = 0; i < len; i++)
-		dup[i] = str[i];
+		dupl[i] = str[i];
 	dupl[len] = '\0';
 	return (dupl);
 }
@@ -30,7 +30,7 @@ int _strcmp(char *st1, char *st2)
 	while (*st1 != '\0' && *st2 != '\0')
 	{
 		if (*st1 != *st2)
-			return (*st2 - *st2);
+			return (*st1 - *st2);
 	st1++;
 	st2++;
 	}
