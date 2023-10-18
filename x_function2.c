@@ -1,24 +1,23 @@
 #include "shell.h"
 /**
- * _strlen-: This is the name of the function
- * @str: a pointer to a null-terminated character array (string)
- *
- * return: always 0
+ * _strlen - function that calc a length,
+ * @st: a pointer to a null-terminated character array (string)
+ * Return: always leng,
  */
-
-int _strlen(char *str)
+int _strlen(char *st)
 {
 	int leng = 0;
+
 	while (st[leng] != '\0')
 		leng++;
 	return (leng);
 }
 
 /**
- * _strcat-: the name of the function
- * @str: a pointer to a null-terminated character array (string)
- *
- * return: dest
+ * _strcat - function that concocat
+ * @src: a pointer to a null-terminated character array (string)
+ * @dest: a pnt char (destination)
+ * Return: return the val of dest,
  */
 char *_strcat(char *dest, char *src)
 {
@@ -32,26 +31,23 @@ char *_strcat(char *dest, char *src)
 		srclen++;
 	}
 	dest[destlen = srclen] = '\0';
-
 	return (dest);
 }
 /**
- * char *: indicating that it returns a pointer to a character (string)
- * _strcpy: the name of the function
- * dest : name of a function
- *
- * return: 0
- */ 
+ * _strcpy - function that copy,
+ * @dest: char pointer,
+ * @src: char pointer,
+ * Return: dest value,
+ */
 char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
 
-	while (src[1] != '\0')
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
-
 	return (dest);
 }
